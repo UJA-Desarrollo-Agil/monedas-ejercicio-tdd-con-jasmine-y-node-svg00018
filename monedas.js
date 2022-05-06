@@ -36,6 +36,17 @@ var monedas = module.exports = {};
  */
 monedas.esMonedaValida = function (valor) {
     // Escribir el código necesario para que vayan pasando las pruebas una a una.
+    let monedasValidas = [0.05, 0.10, 0.20, 0.50, 1, 2, 5, 10, 20, 50, 100, 200 , 500];
+    let contador = 0;
+    monedasValidas.forEach(element => {
+        if (element == valor) {
+            contador += 1;
+        }
+    });
+    if (valor == null || valor <= 0 || contador == 0) {
+        return false;
+    }
+    return true;
 }
 
 /**
