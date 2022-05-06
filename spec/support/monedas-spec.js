@@ -5,8 +5,7 @@
  */
 
 // Carga las funciones disponibles en monedas.js
-var monedas = require("../monedas.js");
-
+var monedas = require("../../monedas.js");
 /* 
 =================================================================
    Primera parte: 
@@ -23,29 +22,29 @@ A continuación:
 describe("Comprobación del dinero", function () {
     it("Valores negativos, 0 y null no deben ser legales",
         function () {
-            //expect(monedas.esMonedaValida()).toBeFalse()
-            //expect(monedas.esMonedaValida(0)).toBeFalse()
-            //expect(monedas.esMonedaValida(-10)).toBeFalse()
+            expect(monedas.esMonedaValida()).toBeFalse()
+            expect(monedas.esMonedaValida(0)).toBeFalse()
+            expect(monedas.esMonedaValida(-10)).toBeFalse()
         });
     it("Valor distinto de 0.05, 0.10, 0.20, 0.50, 1, 2, 5, 10, 20, 50, 100, 200 y 500 debe dar false",
         function () {
-            //expect(monedas.esMonedaValida(0.23)).toBeFalse()
+            expect(monedas.esMonedaValida(0.23)).toBeFalse()
         });
     it("Valor igual a uno de 0.05, 0.10, 0.20, 0.50, 1, 2, 5, 10, 20, 50, 100, 200 y 500 debe dar true",
         function () {
-            //expect(monedas.esMonedaValida(0.05)).toBeTrue()
-            //expect(monedas.esMonedaValida(0.10)).toBeTrue()
-            //expect(monedas.esMonedaValida(0.20)).toBeTrue()
-            //expect(monedas.esMonedaValida(0.50)).toBeTrue()
-            //expect(monedas.esMonedaValida(1)).toBeTrue()
-            //expect(monedas.esMonedaValida(2)).toBeTrue()
-            //expect(monedas.esMonedaValida(5)).toBeTrue()
-            //expect(monedas.esMonedaValida(10)).toBeTrue()
-            //expect(monedas.esMonedaValida(20)).toBeTrue()
-            //expect(monedas.esMonedaValida(50)).toBeTrue()
-            //expect(monedas.esMonedaValida(100)).toBeTrue()
-            //expect(monedas.esMonedaValida(200)).toBeTrue()
-            //expect(monedas.esMonedaValida(500)).toBeTrue()
+            expect(monedas.esMonedaValida(0.05)).toBeTrue()
+            expect(monedas.esMonedaValida(0.10)).toBeTrue()
+            expect(monedas.esMonedaValida(0.20)).toBeTrue()
+            expect(monedas.esMonedaValida(0.50)).toBeTrue()
+            expect(monedas.esMonedaValida(1)).toBeTrue()
+            expect(monedas.esMonedaValida(2)).toBeTrue()
+            expect(monedas.esMonedaValida(5)).toBeTrue()
+            expect(monedas.esMonedaValida(10)).toBeTrue()
+            expect(monedas.esMonedaValida(20)).toBeTrue()
+            expect(monedas.esMonedaValida(50)).toBeTrue()
+            expect(monedas.esMonedaValida(100)).toBeTrue()
+            expect(monedas.esMonedaValida(200)).toBeTrue()
+            expect(monedas.esMonedaValida(500)).toBeTrue()
         });
 });
 
